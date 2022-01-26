@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp17"
+        xmlns:lib="clr-namespace:WpfApp17;assembly=ColorPicker" 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
         
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <local:ColorPicker x:Name="colorPicker" Margin="5" 
+          ColorChanged="colorPicker_ColorChanged"></local:ColorPicker>
+        <TextBlock Grid.Row="1" Name="txb"/>
+     
     </Grid>
 </Window>
+    
